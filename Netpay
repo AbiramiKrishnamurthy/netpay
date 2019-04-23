@@ -1,0 +1,40 @@
+#include<iostream.h>
+#include<conio.h>
+class employee;
+{
+private:
+int empno;
+char ename[20];
+float basic, netpay,hra,da;
+float calculate ()
+{
+float netpay;
+netpay=basic+da+hra;
+return netpay;
+}
+void havedata()
+{
+cout<<"\n Enter the EName,EmpNo,Basic,DA,HRA";
+cin>>ename>>empno>>basic>>da>>hra;
+netpay=calculate();
+}
+
+
+void dispdata()
+{
+cout<<employee name: <<ename;
+cout<<employee number: <<empno;
+cout<<employee basic pay: <<basic;
+cout<<employee da: <<da;
+cout<<employee hra: <<hra;
+cout<<employee netpay: <<netpay;
+}
+};
+void main()
+{
+clrscr()
+employee emp;
+emp.havedata();
+emp.dispdata();
+getch();
+}
